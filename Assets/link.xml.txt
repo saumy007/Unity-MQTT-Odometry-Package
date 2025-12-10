@@ -1,0 +1,24 @@
+<linker>
+  <!-- Preserve the M2Mqtt library -->
+  <assembly fullname="uPLibrary.Networking.M2Mqtt">
+    <type fullname="uPLibrary.Networking.M2Mqtt.MqttClient" preserve="all"/>
+    <type fullname="uPLibrary.Networking.M2Mqtt.Messages.*" preserve="all"/>
+    <type fullname="uPLibrary.Networking.M2Mqtt.Session.*" preserve="all"/>
+  </assembly>
+
+  <!-- Preserve the M2MqttUnity wrapper -->
+  <assembly fullname="M2MqttUnity">
+    <type fullname="M2MqttUnity.M2MqttUnityClient" preserve="all"/>
+  </assembly>
+
+  <!-- Preserve your own classes that are serialized or reflected -->
+  <assembly fullname="Assembly-CSharp">
+    <type fullname="QuestMqttPublisher" preserve="all"/>
+    <type fullname="QuestMqttPublisher+HeadsetData" preserve="all"/>
+    <type fullname="QuestMqttPublisher+HeadsetData/Position" preserve="all"/>
+    <type fullname="QuestMqttPublisher+HeadsetData/Rotation" preserve="all"/>
+  </assembly>
+
+  <!-- Optional: Preserve TextMeshPro classes used in UI -->
+  <assembly fullname="Unity.TextMeshPro" preserve="all"/>
+</linker>
