@@ -145,8 +145,10 @@ Click on Build (this will build an APK)
 
 Install the APK on meta quest through adb
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Use Cases
-Use Case 1: Real-Time VR Odometry Streaming for Robotics & Digital Twin Systems
+# Use Case 1: Real-Time VR Odometry Streaming for Robotics & Digital Twin Systems
 
 Description:
 The Meta Quest MQTT Odometry Publisher application enables real-time streaming of headset pose and odometry data from Meta Quest 2/3 to external systems over MQTT. This allows robotics, simulation, and digital twin platforms running on Linux to receive continuous, low-latency 6-DoF pose data without requiring physical sensors or complex motion-capture setups.
@@ -174,12 +176,12 @@ Simulation-based testing without deploying physical hardware
 Key Benefit:
 Provides a lightweight, flexible, and network-agnostic way to stream XR pose data into robotics and simulation environments.
 
-Use Case 2: Network-Independent Deployment for Rapid Testing & Field Experiments
+# Use Case 2: Network-Independent Deployment for Rapid Testing & Field Experiments
 
 Description:
 The application eliminates the need to rebuild and redeploy the Meta Quest APK whenever the MQTT broker IP changes. By allowing users to enter the broker IP directly in the Quest UI, the system supports dynamic network environments such as mobile hotspots and temporary test setups.
 
-Workflow:
+# Workflow:
 
 Linux machine and Meta Quest connect to a shared Wi-Fi network (e.g., phone hotspot).
 
@@ -189,7 +191,7 @@ The application connects to the MQTT broker and starts publishing odometry data.
 
 Network changes (e.g., hotspot IP change) require only updating the IP in the UI—no APK rebuild needed.
 
-Applications:
+# Applications:
 
 Rapid prototyping and testing in labs, workshops, or demo environments
 
