@@ -145,6 +145,60 @@ Click on Build (this will build an APK)
 
 Install the APK on meta quest through adb
 
+Use Cases
+Use Case 1: Real-Time VR Odometry Streaming for Robotics & Digital Twin Systems
+
+Description:
+The Meta Quest MQTT Odometry Publisher application enables real-time streaming of headset pose and odometry data from Meta Quest 2/3 to external systems over MQTT. This allows robotics, simulation, and digital twin platforms running on Linux to receive continuous, low-latency 6-DoF pose data without requiring physical sensors or complex motion-capture setups.
+
+Workflow:
+
+Meta Quest headset captures head position and orientation in Unity.
+
+Odometry data is converted into a standardized JSON format.
+
+Data is published to an MQTT broker running on a Linux machine.
+
+Robotics or simulation systems subscribe to the MQTT topic (test) and consume the data.
+
+Applications:
+
+Head or camera pose control in humanoid or mobile robots
+
+Human-in-the-loop control for digital twins (e.g., Isaac Sim, Gazebo)
+
+Validation and testing of robot perception and navigation pipelines
+
+Simulation-based testing without deploying physical hardware
+
+Key Benefit:
+Provides a lightweight, flexible, and network-agnostic way to stream XR pose data into robotics and simulation environments.
+
+Use Case 2: Network-Independent Deployment for Rapid Testing & Field Experiments
+
+Description:
+The application eliminates the need to rebuild and redeploy the Meta Quest APK whenever the MQTT broker IP changes. By allowing users to enter the broker IP directly in the Quest UI, the system supports dynamic network environments such as mobile hotspots and temporary test setups.
+
+Workflow:
+
+Linux machine and Meta Quest connect to a shared Wi-Fi network (e.g., phone hotspot).
+
+User enters the current broker IP address in the Quest application UI.
+
+The application connects to the MQTT broker and starts publishing odometry data.
+
+Network changes (e.g., hotspot IP change) require only updating the IP in the UI—no APK rebuild needed.
+
+Applications:
+
+Rapid prototyping and testing in labs, workshops, or demo environments
+
+Field testing where network configurations change frequently
+
+Developer and QA testing without repeated APK builds
+
+Multi-location experiments using different broker machines
+
 `sudo apt install adb
 adb devices #check devices
 adb install "name of your apk".apk`
